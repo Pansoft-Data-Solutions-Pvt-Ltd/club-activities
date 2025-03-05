@@ -248,7 +248,7 @@ function StudentClubs() {
 
     const showSpinning = !payload && isLoading;
     const showNotConfigured = !payload && inPreviewMode && dataError?.statusCode === 404;
-    const showNoClubs =  !payload?.studentClub?.length===0;
+    const showNoClubs =  payload &&  payload?.studentClubs?.length===0;
 
     if (showNotConfigured) {
         return (
